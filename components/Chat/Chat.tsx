@@ -16,7 +16,6 @@ import { getEndpoint } from '@/utils/app/api';
 import {
   saveConversation,
   saveConversations,
-  updateConversation,
 } from '@/utils/app/conversation';
 import { throttle } from '@/utils/data/throttle';
 
