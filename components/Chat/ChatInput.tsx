@@ -281,7 +281,7 @@ export const ChatInput = ({
 
         <div className="relative mx-2 flex w-full flex-grow flex-col rounded-md border border-black/10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:border-gray-900/50 dark:bg-[#40414F] dark:text-white dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] sm:mx-4">
           <button
-            className="absolute left-2 top-2 rounded-sm p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
+            className="absolute p-1 rounded-sm left-2 top-2 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
             onClick={() => setShowPluginSelect(!showPluginSelect)}
             onKeyDown={(e) => {}}
           >
@@ -313,7 +313,7 @@ export const ChatInput = ({
 
           <textarea
             ref={textareaRef}
-            className="m-0 w-full resize-none border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white md:py-3 md:pl-10"
+            className="w-full p-0 py-2 pl-10 pr-8 m-0 text-black bg-transparent border-0 resize-none dark:bg-transparent dark:text-white md:py-3 md:pl-10"
             style={{
               resize: 'none',
               bottom: `${textareaRef?.current?.scrollHeight}px`,
@@ -336,20 +336,20 @@ export const ChatInput = ({
           />
 
           <button
-            className="absolute right-2 top-2 rounded-sm p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
+            className="absolute p-1 rounded-sm right-2 top-2 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
             onClick={handleSend}
           >
             {messageIsStreaming ? (
-              <div className="h-4 w-4 animate-spin rounded-full border-t-2 border-neutral-800 opacity-60 dark:border-neutral-100"></div>
+              <div className="w-4 h-4 border-t-2 rounded-full animate-spin border-neutral-800 opacity-60 dark:border-neutral-100"></div>
             ) : (
               <IconSend size={18} />
             )}
           </button>
 
           {showScrollDownButton && (
-            <div className="absolute bottom-12 right-0 lg:bottom-0 lg:-right-10">
+            <div className="absolute right-0 bottom-12 lg:bottom-0 lg:-right-10">
               <button
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-300 text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-neutral-200"
+                className="flex items-center justify-center text-gray-800 rounded-full shadow-md h-7 w-7 bg-neutral-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-neutral-200"
                 onClick={onScrollDownClick}
               >
                 <IconArrowDown size={18} />
@@ -358,7 +358,7 @@ export const ChatInput = ({
           )}
 
           {showPromptList && filteredPrompts.length > 0 && (
-            <div className="absolute bottom-12 w-full">
+            <div className="absolute w-full bottom-12">
               <PromptList
                 activePromptIndex={activePromptIndex}
                 prompts={filteredPrompts}
@@ -381,12 +381,12 @@ export const ChatInput = ({
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
-          href="https://github.com/mckaywrigley/chatbot-ui"
+          href="https://aivvm.oss-cn-shanghai.aliyuncs.com/alipay.png"
           target="_blank"
           rel="noreferrer"
           className="underline"
         >
-          ChatBot UI
+        免费赞助我！
         </a>
         .{' '}
         {t(
