@@ -312,7 +312,7 @@ export const ChatInput = ({
             </div>
           )}
 
-          <div className="absolute bottom-full md:mb-4 mb-12 mx-auto flex w-full justify-center md:justify-end pointer-events-none">
+          <div className="absolute flex justify-center w-full mx-auto mb-12 pointer-events-none bottom-full md:mb-4 md:justify-end">
             <ChatInputTokenCount content={content} />
           </div>
 
@@ -391,11 +391,11 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        免费赞助我！
+        公益站长不易，免费赞助我买服务器！
         </a>
         .{' '}
         {t(
-          "Q群聊天交流: 874401840 , Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
+          "聊天交流交友Q群: 874401840. 禁止爬虫,恶意攻击等行为,发现直接永久禁用IP,日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢~",
         )}
       </div>
     </div>
