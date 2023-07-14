@@ -7,132 +7,115 @@ export interface OpenAIModel {
   tokenLimit: number;
 }
 
+// Define all the model identifiers
 export enum OpenAIModelID {
   GPT_3_5 = 'gpt-3.5-turbo',
   GPT_3_5_0613 = 'gpt-3.5-turbo-0613',
-  GPT_3_5_AZ = 'gpt-35-turbo',
   GPT_3_5_16K = 'gpt-3.5-turbo-16k',
-  GPT_4 = 'gpt-4',
+  GPT_3_5_16K_POE = 'gpt-3.5-turbo-16k-poe',
+  GPT_3_5_16K_0613 = 'gpt-3.5-turbo-16k-0613',
   GPT_4_0613 = 'gpt-4-0613',
-  GPT_4_32K = 'gpt-4-32k',
-  GPT_3_5_POE = 'gpt-3.5-turbo-poe',
+  GPT_4 = 'gpt-4',
   GPT_4_POE = 'gpt-4-poe',
-  CLAUDE_INSTANT = 'claude-instant',
-  CLAUDE_PLUS = 'claude+',
+  GPT_4_32K_0613 = 'gpt-4-32k-0613',
+  GPT_4_32K = 'gpt-4-32k',
+  GPT_4_32K_POE = 'gpt-4-32k-poe',
+  CLAUDE_2_100K = 'claude-2-100k',
   CLAUDE_INSTANT_100K = 'claude-instant-100k',
-  TEST_GPT_3_5_POE = 'test-gpt-3.5-turbo-poe',
-  TEST_GPT_4_POE = 'test-gpt-4-poe',
-  TEST_CLAUDE_INSTANT = 'test-claude-instant',
-  TEST_CLAUDE_PLUS = 'test-claude+',
-  TEST_CLAUDE_INSTANT_100K = 'test-claude-instant-100k',
+  CLAUDE_INSTANT = 'claude-instant',
   BARD = 'bard',
+  SAGE = 'sage',
+  GOOGLE_PALM	= 'google-palm',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
 export const fallbackModelID = OpenAIModelID.GPT_3_5;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
+  // Define all the models with their properties
   [OpenAIModelID.GPT_3_5]: {
     id: OpenAIModelID.GPT_3_5,
-    name: 'GPT-3.5-TURBO',
+    name: 'GPT-3.5',
     maxLength: 12000,
-    tokenLimit: 4000,
+    tokenLimit: 4096,
   },
   [OpenAIModelID.GPT_3_5_0613]: {
     id: OpenAIModelID.GPT_3_5_0613,
-    name: 'GPT-3.5-TURBO-0613',
+    name: 'GPT-3.5-0613',
     maxLength: 12000,
-    tokenLimit: 4000,
-  },
-  [OpenAIModelID.GPT_3_5_AZ]: {
-    id: OpenAIModelID.GPT_3_5_AZ,
-    name: 'GPT-3.5-TURBO',
-    maxLength: 12000,
-    tokenLimit: 4000,
+    tokenLimit: 4096,
   },
   [OpenAIModelID.GPT_3_5_16K]: {
     id: OpenAIModelID.GPT_3_5_16K,
-    name: 'GPT-3.5-TURBO-16K',
+    name: 'GPT-3.5-16K',
     maxLength: 48000,
-    tokenLimit: 16000,
+    tokenLimit: 16384,
   },
-  [OpenAIModelID.GPT_4]: {
-    id: OpenAIModelID.GPT_4,
-    name: 'GPT-4',
-    maxLength: 24000,
-    tokenLimit: 8000,
+  [OpenAIModelID.GPT_3_5_16K_POE]: {
+    id: OpenAIModelID.GPT_3_5_16K_POE,
+    name: 'GPT-3.5-16K-POE',
+    maxLength: 48000,
+    tokenLimit: 16384,
+  },
+  [OpenAIModelID.GPT_3_5_16K_0613]: {
+    id: OpenAIModelID.GPT_3_5_16K_0613,
+    name: 'GPT-3.5-16K-0613',
+    maxLength: 48000,
+    tokenLimit: 16384,
   },
   [OpenAIModelID.GPT_4_0613]: {
     id: OpenAIModelID.GPT_4_0613,
     name: 'GPT-4-0613',
     maxLength: 24000,
-    tokenLimit: 8000,
+    tokenLimit: 8192,
   },
-  [OpenAIModelID.GPT_4_32K]: {
-    id: OpenAIModelID.GPT_4_32K,
-    name: 'GPT-4-32K',
-    maxLength: 96000,
-    tokenLimit: 32000,
-  },
-  [OpenAIModelID.GPT_3_5_POE]: {
-    id: OpenAIModelID.GPT_3_5_POE,
-    name: 'GPT-3.5-TURBO-POE',
-    maxLength: 12000,
-    tokenLimit: 4000,
+  [OpenAIModelID.GPT_4]: {
+    id: OpenAIModelID.GPT_4,
+    name: 'GPT-4',
+    maxLength: 24000,
+    tokenLimit: 8192,
   },
   [OpenAIModelID.GPT_4_POE]: {
     id: OpenAIModelID.GPT_4_POE,
     name: 'GPT-4-POE',
     maxLength: 24000,
-    tokenLimit: 8000,
+    tokenLimit: 8192,
   },
-  [OpenAIModelID.CLAUDE_INSTANT]: {
-    id: OpenAIModelID.CLAUDE_INSTANT,
-    name: 'CLAUDE-INSTANT',
-    maxLength: 11000,
-    tokenLimit: 11000,
+  [OpenAIModelID.GPT_4_32K_0613]: {
+    id: OpenAIModelID.GPT_4_32K_0613,
+    name: 'GPT-4-32K-0613',
+    maxLength: 96000,
+    tokenLimit: 32768,
   },
-  [OpenAIModelID.CLAUDE_PLUS]: {
-    id: OpenAIModelID.CLAUDE_PLUS,
-    name: 'CLAUDE+',
-    maxLength: 11000,
-    tokenLimit: 11000,
+  [OpenAIModelID.GPT_4_32K]: {
+    id: OpenAIModelID.GPT_4_32K,
+    name: 'GPT-4-32K',
+    maxLength: 96000,
+    tokenLimit: 32768,
+  },
+  [OpenAIModelID.GPT_4_32K_POE]: {
+    id: OpenAIModelID.GPT_4_32K_POE,
+    name: 'GPT-4-32K-POE',
+    maxLength: 96000,
+    tokenLimit: 32768,
+  },
+  [OpenAIModelID.CLAUDE_2_100K]: {
+    id: OpenAIModelID.CLAUDE_2_100K,
+    name: 'Claude-2-100K',
+    maxLength: 360000,
+    tokenLimit: 102400,
   },
   [OpenAIModelID.CLAUDE_INSTANT_100K]: {
     id: OpenAIModelID.CLAUDE_INSTANT_100K,
-    name: 'CLAUDE-INSTANT-100K',
-    maxLength: 100000,
-    tokenLimit: 100000,
+    name: 'Claude-Instant-100K',
+    maxLength: 360000,
+    tokenLimit: 102400,
   },
-  [OpenAIModelID.TEST_GPT_3_5_POE]: {
-    id: OpenAIModelID.TEST_GPT_3_5_POE,
-    name: 'TEST-GPT-3.5-TURBO-POE',
-    maxLength: 12000,
-    tokenLimit: 4000,
-  },
-  [OpenAIModelID.TEST_GPT_4_POE]: {
-    id: OpenAIModelID.TEST_GPT_4_POE,
-    name: 'TEST-GPT-4-POE',
-    maxLength: 24000,
-    tokenLimit: 8000,
-  },
-  [OpenAIModelID.TEST_CLAUDE_INSTANT]: {
-    id: OpenAIModelID.TEST_CLAUDE_INSTANT,
-    name: 'TEST-CLAUDE-INSTANT',
-    maxLength: 11000,
-    tokenLimit: 11000,
-  },
-  [OpenAIModelID.TEST_CLAUDE_PLUS]: {
-    id: OpenAIModelID.TEST_CLAUDE_PLUS,
-    name: 'TEST-CLAUDE+',
-    maxLength: 11000,
-    tokenLimit: 11000,
-  },
-  [OpenAIModelID.TEST_CLAUDE_INSTANT_100K]: {
-    id: OpenAIModelID.TEST_CLAUDE_INSTANT_100K,
-    name: 'TEST-CLAUDE-INSTANT-100K',
-    maxLength: 100000,
-    tokenLimit: 100000,
+  [OpenAIModelID.CLAUDE_INSTANT]: {
+    id: OpenAIModelID.CLAUDE_INSTANT,
+    name: 'Claude-Instant',
+    maxLength: 36000,
+    tokenLimit: 10240,
   },
   [OpenAIModelID.BARD]: {
     id: OpenAIModelID.BARD,
@@ -140,4 +123,18 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     maxLength: 30000,
     tokenLimit: 10000,
   },
+  [OpenAIModelID.SAGE]: {
+    id: OpenAIModelID.SAGE,
+    name: 'SAGE',
+    maxLength: 30000,
+    tokenLimit: 10000,
+  },
+  [OpenAIModelID.GOOGLE_PALM]: {
+    id: OpenAIModelID.GOOGLE_PALM,
+    name: 'GOOGLE-PALM',
+    maxLength: 30000,
+    tokenLimit: 10000,
+  },
+
 };
+  
