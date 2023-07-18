@@ -1,9 +1,20 @@
-version: '3.6'
+version: '3'
 
 services:
-  chatgpt:
-    build: .
+  chatbot-ui:
+    container_name: chatbot-ui
+    image: caoyunzhou/chatbot-ui
+    restart: always 
     ports:
-      - 3000:3000
+      - "3000:3000"
     environment:
-      - 'OPENAI_API_KEY='
+      # 端口
+      PORT: 3000
+      # 认证令牌
+      OPENAI_API_KEY : sk-123456
+      # 端点
+      OPENAI_API_HOST : "https://api.openai.com"
+      # 模型
+      DEFAULT_MODEL : gpt-3.5-turbo
+      LOG_INCOMING_MESSAGES : true
+      LOG_TRIM_MESSAGES : true
