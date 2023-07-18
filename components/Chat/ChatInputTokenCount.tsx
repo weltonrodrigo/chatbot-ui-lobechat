@@ -8,9 +8,22 @@ import { Tiktoken } from '@dqbd/tiktoken/lite';
 import BigNumber from 'bignumber.js';
 
 const PRICING: Record<string, BigNumber> = {
-  'gpt-4': BigNumber('0.03').div(1000),
-  'gpt-4-32k': BigNumber('0.03').div(1000),
+  'sage': BigNumber('0.002').div(1000),
   'gpt-3.5-turbo': BigNumber('0.002').div(1000),
+  'gpt-3.5-turbo-0301': BigNumber('0.002').div(1000),
+  'gpt-3.5-turbo-0613': BigNumber('0.002').div(1000),
+  'gpt-3.5-turbo-16k': BigNumber('0.002').div(1000),
+  'gpt-3.5-turbo-16k-0613': BigNumber('0.002').div(1000),
+  'gpt-4': BigNumber('0.03').div(1000),
+  'gpt-4-0314': BigNumber('0.03').div(1000),
+  'gpt-4-0613': BigNumber('0.03').div(1000),
+  'gpt-4-32k': BigNumber('0.03').div(1000),
+  'gpt-4-32k-0314': BigNumber('0.03').div(1000),
+  'gpt-4-32k-0613': BigNumber('0.03').div(1000),
+  'claude-instant': BigNumber('0.002').div(1000),
+  'claude-2-100k': BigNumber('0.002').div(1000),
+  'claude-instant-100k': BigNumber('0.002').div(1000),
+  'google-palm': BigNumber('0.002').div(1000),
 };
 
 export function ChatInputTokenCount(props: { content: string | undefined }) {
@@ -62,7 +75,7 @@ export function ChatInputTokenCount(props: { content: string | undefined }) {
 
   if (pricing == null || count == null) return null;
   return (
-    <div className="bg-opacity-10 bg-neutral-300 rounded-full py-1 px-2 text-neutral-400 pointer-events-auto">
+    <div className="px-2 py-1 rounded-full pointer-events-auto bg-opacity-10 bg-neutral-300 text-neutral-400">
       {t('{{count}} tokens / ${{price}}', {
         count,
         price: pricing.multipliedBy(count).toFixed(),
