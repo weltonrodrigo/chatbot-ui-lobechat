@@ -25,7 +25,7 @@ export enum OpenAIModelID {
   CLAUDE_INSTANT_100K = 'claude-instant-100k',
   CLAUDE_INSTANT = 'claude-instant',
   BARD = 'bard',
-  SAGE = 'sage',
+  ASSISTANT = 'assistant',
   GOOGLE_PALM	= 'google-palm',
 }
 
@@ -130,9 +130,9 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     maxLength: 30000,
     tokenLimit: 10000,
   },
-  [OpenAIModelID.SAGE]: {
-    id: OpenAIModelID.SAGE,
-    name: 'SAGE',
+  [OpenAIModelID.ASSISTANT]: {
+    id: OpenAIModelID.ASSISTANT,
+    name: 'ASSISTANT',
     maxLength: 30000,
     tokenLimit: 10000,
   },
