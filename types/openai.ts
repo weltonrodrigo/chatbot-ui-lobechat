@@ -27,6 +27,7 @@ export enum OpenAIModelID {
   BARD = 'bard',
   ASSISTANT = 'assistant',
   GOOGLE_PALM	= 'google-palm',
+  LLAMA_2_70b_chat = 'llama_2_70b_chat',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
@@ -142,6 +143,11 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     maxLength: 30000,
     tokenLimit: 10000,
   },
-
+  [OpenAIModelID.LLAMA_2_70b_chat]: {
+    id: OpenAIModelID.LLAMA_2_70b_chat,
+    name: 'LLAMA_2_70b_chat',
+    maxLength: 30000,
+    tokenLimit: 10000,
+  },
 };
   
