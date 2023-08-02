@@ -393,7 +393,16 @@ export const ChatInput = ({
         >
         公益站长不易，免费赞助我买服务器！
         </a>
-        .{' '}
+        ,{' '}
+        <a
+          href="https://www.yishengfk.cn/links/7F3F8632"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+        GPT账号赞助号商有需要自行购买
+        </a>
+        ,{' '}
         {t(
           "禁止爬虫,恶意攻击等行为,发现直接永久禁用IP,日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢~",
         )}
