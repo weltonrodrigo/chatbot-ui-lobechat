@@ -391,11 +391,11 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        公益站长不易，免费赞助我买服务器！
+        赞助服务器费用！
         </a>
         ,{' '}
         <a
-          href="https://www.yishengfk.cn/links/7F3F8632"
+          href="https://fk.lqqq.ltd/"
           target="_blank"
           rel="noreferrer"
           className="underline"
