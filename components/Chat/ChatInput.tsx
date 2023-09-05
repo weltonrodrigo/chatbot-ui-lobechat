@@ -394,15 +394,6 @@ export const ChatInput = ({
         赞助服务器费用！
         </a>
         ,{' '}
-        <a
-          href="https://fk.lqqq.ltd/"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-        GPT账号赞助号商有需要自行购买
-        </a>
-        ,{' '}
         {t(
           "禁止爬虫,恶意攻击等行为,发现直接永久禁用IP,日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢~",
         )}
