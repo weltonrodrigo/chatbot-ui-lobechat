@@ -391,7 +391,16 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        每月入不敷出
+        免费赞助
+        </a>
+        ,{' '}
+        <a
+          href="https://aivvm.oss-cn-shanghai.aliyuncs.com/ali-sc.png"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+        支付宝免费领红包支持站长
         </a>
         ,{' '}
         {t(
