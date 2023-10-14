@@ -391,7 +391,7 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        免费赞助
+        赞助站长
         </a>
         ,{' '}
         <a
@@ -403,8 +403,17 @@ export const ChatInput = ({
         支付宝免费领红包支持站长
         </a>
         ,{' '}
+        <a
+          href="https://aivvm.oss-cn-shanghai.aliyuncs.com/dazhaxie.png"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+        讨好岳父大人推广大闸蟹
+        </a>
+        ,{' '}
         {t(
-          "日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢,每个月入不敷出.",
+          "日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢",
         )}
       </div>
     </div>
