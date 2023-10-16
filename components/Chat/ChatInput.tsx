@@ -404,7 +404,7 @@ export const ChatInput = ({
         </a>
         ,{' '}
         <a
-          href="https://aivvm.oss-cn-shanghai.aliyuncs.com/dazhaxie.png"
+          href="https://mobile.yangkeduo.com/goods2.html?goods_id=300115037829"
           target="_blank"
           rel="noreferrer"
           className="underline"
