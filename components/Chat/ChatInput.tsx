@@ -391,7 +391,7 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        赞助站长
+        基于公益性质运营,运行成本完全依赖于大家的善意捐赠和无私贡献
         </a>
         ,{' '}
         <a
@@ -400,20 +400,11 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        支付宝免费领红包支持站长
-        </a>
-        ,{' '}
-        <a
-          href="https://mobile.yangkeduo.com/goods2.html?goods_id=300115037829"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-        讨好岳父大人推广大闸蟹
+        支付宝扫一扫免费领红包
         </a>
         ,{' '}
         {t(
-          "日常免费使用是足够的,我不喜欢猫抓老鼠的游戏谢谢",
+          "谢谢",
         )}
       </div>
     </div>
