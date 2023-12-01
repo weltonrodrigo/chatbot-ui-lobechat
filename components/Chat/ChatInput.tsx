@@ -391,7 +391,7 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        基于公益性质运营,运行成本完全依赖于大家的善意捐赠和无私贡献
+        捐赠
         </a>
         ,{' '}
         <a
@@ -400,7 +400,7 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-        支付宝扫一扫免费领红包
+        支付宝扫一扫领大额888红包
         </a>
         ,{' '}
         {t(
