@@ -13,7 +13,7 @@ export const config = {
   runtime: 'edge',
 };
 
-const COMPLETION_TOKEN_LIMIT = 30000;
+const COMPLETION_TOKEN_LIMIT = 4096;
 const TOKENIZER_BUFFER_FACTOR = 0.9; // Set a buffer of 10% to account for any discrepancies in token counting
 
 const handler = async (req: Request): Promise<Response> => {
