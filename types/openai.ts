@@ -16,6 +16,7 @@ export enum OpenAIModelID {
   GPT_3_5_1106 = 'gpt-3.5-turbo-1106',
   GPT_4_0613 = 'gpt-4-0613',
   GPT_4 = 'gpt-4',
+  GPT_4_TURBO_PREVIEW = 'gpt-4-turbo-preview',
   GPT_4_1106 = 'gpt-4-1106-preview',	
   GPT_4_vision = 'gpt-4-vision-preview',	
   GPT_4_32K_0613 = 'gpt-4-32k-0613',
@@ -75,6 +76,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     name: 'GPT-4',
     maxLength: 24000,
     tokenLimit: 8192,
+  },
+  [OpenAIModelID.GPT_4_TURBO_PREVIEW]: {
+    id: OpenAIModelID.GPT_4_TURBO_PREVIEW,
+    name: 'gpt-4-turbo-preview',
+    maxLength: 376000,
+    tokenLimit: 128000,
   },
   [OpenAIModelID.GPT_4_1106]: {
     id: OpenAIModelID.GPT_4_1106,
